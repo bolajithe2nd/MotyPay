@@ -1,0 +1,121 @@
+/*=== Google Fonts ===*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@600&display=swap');
+
+:root {
+    --header-height: 3.5rem;
+
+    /* Colors */
+    --body-color: #FFFFFF;
+    --container-color: #FAFAFA;
+    --first-color: #A2C587;
+    --first-color-alt: #EDFFDF;
+    --title-color: #353431;
+    --text-color: #686764;
+    --green-color: #719952;
+    --white-color: #FFFAFA;
+    --black-color: #1C1C1E;
+
+    /* Fonts & Typography */
+    --body-font: "DM Sans", sans-serif;
+    --title-font: "Poppins", sans-serif;
+    --biggest-font-size: 1.8rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* Font weights */
+    --font-semi-bold: 600;
+    --font-medium: 400;
+
+    /* Paddings & Margins */
+    --button-padding: 0.75rem 1.5rem;
+
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+}
+
+/*=== Responsive typography ===*/
+@media (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/*=== Base ===*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* color-scheme: light dark; */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    transition: all .3s ease;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--font-semi-bold);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/*=== Dark Theme ===*/
+body.dark {
+
+    /* Colors */
+    --body-color: #1C1C1E;
+    --container-color: #2C2C2E;
+    --black-color: #2C2C2E;
+
+    --title-color: #FFFAFA;
+    --text-color: #EBEBF5;
+}
+
+/* Services Dark Theme */
+body.dark .services {
+    background-color: var(--body-color);
+}
+
+body.dark .services__card {
+    background-color: var(--container-color);
+}
